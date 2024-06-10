@@ -32,7 +32,7 @@ model_rnn.add(Embedding(max_words, 64))
 model_rnn.add(SimpleRNN(32))
 model_rnn.add(Dense(3, activation='softmax'))
 model_rnn.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model_rnn.fit(data, labels, epochs=5, batch_size=1, verbose=0)
+model_rnn.fit(data, labels, epochs=10, batch_size=1, verbose=0)
 
 
 # Define the model architecture for LSTM
@@ -41,7 +41,7 @@ model_lstm.add(Embedding(max_words, 64))
 model_lstm.add(LSTM(32))
 model_lstm.add(Dense(3, activation='softmax'))
 model_lstm.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model_lstm.fit(data, labels, epochs=5, batch_size=1, verbose=0)
+model_lstm.fit(data, labels, epochs=10, batch_size=1, verbose=0)
 
 
 # Define the model architecture for GRU
@@ -50,7 +50,13 @@ model_gru.add(Embedding(max_words, 64))
 model_gru.add(GRU(32))
 model_gru.add(Dense(3, activation='softmax'))
 model_gru.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model_gru.fit(data, labels, epochs=5, batch_size=1, verbose=0)
+model_gru.fit(data, labels, epochs=10, batch_size=1, verbose=0)
+
+
+
+
+
+
 
 
 
