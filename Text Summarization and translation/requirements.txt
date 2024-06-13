@@ -1,0 +1,4 @@
+gradio
+deeptranslator
+newspaper3k
+transfomers
